@@ -1,0 +1,993 @@
+/*==================================================
+  Template Name: Void 
+  Description: Onepage Parallax Personal Portfolio Template
+  Author: thunder-team
+  Author URL: https://themeforest.net/user/thunder-team
+  Version: 1.1
+==================================================*/
+
+/*==================================================
+
+  [Table of Contents]
+  --------------------------------------------------
+  - body
+    - Typography
+    - Common
+    - Navigation
+    - Homepage Sections
+      - Intro
+      - About
+      - Projects
+      - Services
+      - Blog
+      - Footer - Contact Me
+    - Media Queries
+      - 991px
+      - 767px
+    - Preloader
+    
+==================================================*/
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #666666;
+}
+
+/*==================================================
+  Typography
+  ==================================================*/
+  
+@font-face {
+  font-family: "Athelas W01 Bold";
+  src: url('../fonts/Athelas-W01-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Athelas-W01-Boldd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Athelas-W01-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Athelas-W01-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Athelas-W01-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Athelas-W01-Bold.svg#Athelas W01 Bold') format('svg'); /* Legacy iOS */
+}
+
+
+h1, h2, h3, h4{
+  font-family:"Athelas W01 Bold";
+  color: #2f2f2f;
+}
+
+.headline{
+  margin-bottom: 40px;
+}
+
+.headline h2{
+  font-size: 50px;
+  position: relative;
+  margin-top: 0;
+}
+
+.headline h2.dark{
+  color: #2f2f2f;
+}
+
+.white{
+  color: #fff;
+}
+
+.color{
+  color: #15E99D;
+}
+
+a{
+  color: #15e99d;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: #14ea70;
+  transition: all 1s;
+}
+
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+
+/*==================================================
+  Common
+  ==================================================*/
+
+section{
+  position: relative;
+  width: 72%;
+  margin-left: 8%;
+}
+
+.container{
+  max-width: 1030px;
+}
+
+.wrapper{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+button.btn-primary{
+  background: #14EA70;
+  padding: 6px 30px;
+  font-family: Ailerons;
+  color: #191919;
+  font-size: 25px;
+  border-radius: 0;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button.btn-primary:hover{
+  background: #15E99D;
+  transition: all .5s;
+}
+
+button.btn-secondary{
+  background: transparent;
+  border: 2px solid #15e99d;
+  padding: 6px 30px;
+  font-family:"Athelas W01 Bold";
+  color: #15e99d;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button.btn-secondary:hover{
+  background: #15e99d;
+  border: 2px solid #15e99d;
+  color: #fff;
+  transition: all .5s;
+}
+
+.form-control{
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #f2f2f2;
+  text-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.margin-0{
+  margin: 0 !important;
+}
+
+
+/*==================================================
+  Navigation
+==================================================*/
+
+nav.vertical-right{
+  position: fixed;
+  background: #2f2f2f;
+  float: none;
+  border-radius: 0;
+  border: none;
+  top: 0;
+  right: 0;
+  left: inherit;
+  z-index: 1030;
+  width: 20%;
+  height: 80%;
+  padding: 30px 40px;
+}
+
+nav.vertical-right .navbar-header{
+  float: none;
+}
+
+nav.vertical-right ul.void-vertical-right{
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+}
+
+nav.vertical-right ul.void-vertical-right li{
+  display: block;
+  list-style: none;
+  margin: 15px 0;
+  position: relative;
+}
+
+nav.vertical-right ul.void-vertical-right li::before{
+  content: "";
+  background: #15E99D;
+  width: 15px;
+  height: 1px;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+}
+
+nav.vertical-right ul.void-vertical-right li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+nav.vertical-right ul.void-vertical-right li a:hover,
+nav.vertical-right ul.void-vertical-right li a:active,
+nav.vertical-right ul.void-vertical-right li a:focus{
+  color: #15E99D;
+  transition: all 1s;
+}
+
+nav.vertical-right ul.void-vertical-right li a span.count{
+  color: #15E99D;
+  display: block;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+nav.vertical-right .menu-sign{
+  font-family:"Athelas W01 Bold";
+  color: #fff;
+  text-transform: uppercase;
+}
+
+nav.vertical-right .menu-sign img{
+  margin-right: 20px;
+}
+
+nav.vertical-right .navbar-toggle{
+  border: none;
+}
+
+nav.vertical-right .navbar-toggle:focus, 
+nav.vertical-right .navbar-toggle:hover{
+  background: none;
+}
+
+nav.vertical-right .menu-sign-collapse{
+  color: #2f2f2f; 
+  font-size: 16px; 
+}
+
+nav.vertical-right .menu-sign-collapse img{
+  margin-left: 10px;
+}
+
+
+/*==================================================
+  Intro
+==================================================*/
+
+#intro.parallax-window{
+  background: linear-gradient(to right, rgba(255,255,255, 0.4) , rgba(255,255,255, 0.4));
+  height: 87vh;
+  text-align: center;
+  z-index: 0;
+}
+
+#intro .wrapper{
+  height: 100%;
+}
+
+.my-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+}
+
+.my-info::before{
+  content: "";
+  background: #15e99d;
+  width: 130px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -85px;
+  z-index: -1;
+}
+
+.my-info h1{
+  font-size: 90px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.my-info h3{
+  text-transform: uppercase;
+}
+
+.scroll{
+  font-family:"Athelas W01 Bold";
+  color: #2f2f2f;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.scroll::after{
+  content: "";
+  background: #15e99d;
+  width: 2px;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50px;
+}
+
+
+/*==================================================
+  About Section
+==================================================*/
+
+#about .headline{
+  margin-top: 40px;
+}
+
+.my-photo .parallax-window{
+  height: 540px;
+}
+
+/*==================================================
+  Work Section
+==================================================*/
+
+#work{
+  text-align: center;
+  position: relative;
+}
+
+#work::after{
+  content: "";
+  background: #15e99d;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -9999;
+}
+
+#work .headline h2{
+  margin-top: 0;
+}
+
+.single-project{
+  margin-bottom: 60px;
+  position: relative;
+  text-align: left;
+}
+
+.single-project .onepage-view .project-info{
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  left: -70px;
+}
+
+.single-project .onepage-view .project-info h2{
+  margin-top: 90px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 45px;
+}
+
+.single-project .onepage-view .project-info h2::before{
+  content: "";
+  background: #15e99d;
+  width: 2px;
+  height: 80px;
+  position: absolute;
+  left: 45px;
+  top: -10px;
+  transform: translateY(-100%)
+}
+
+.single-project .onepage-view .project-info span.details{
+  font-family:"Athelas W01 Bold";
+  color: #15e99d;
+  font-size: 18px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.single-project .onepage-view .project-info span.details::after{
+  content: "";
+  background: #15e99d;
+  height: 2px;
+  width: 100%;
+  position: absolute; 
+  left: 0;
+  bottom: -5px;
+}
+
+.single-project .onepage-view .project-info ul.share{
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.single-project .onepage-view .project-info ul.share li{
+  list-style: none;
+}
+
+.single-project .onepage-view .project-img .parallax-window{
+  height: 380px;
+}
+
+.single-project .onepage-view .project-tags{
+  position: absolute;
+  right: -145px;
+  bottom: 105px;
+  padding-left: 70px;
+  transform: rotate(270deg);
+}
+
+.single-project .onepage-view .project-tags::before{
+  content: "";
+  background: #fff;
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.single-project .onepage-view .project-tags ul{
+  margin: 0;
+  padding: 0;
+}
+
+.single-project .onepage-view .project-tags ul li{
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.single-project .onepage-view .project-tags ul li::after{
+  content: "";
+  background: #fff;
+  height: 20px;
+  width: 1px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.single-project .onepage-view .project-tags ul li:last-child::after{
+  content: none;
+}
+
+
+/* Modal Contents | Project Dedail */
+
+.single-project .modal-content{
+  padding: 30px;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.project-carousel .carousel-control{
+  opacity: 1;
+}
+
+.single-project .modal-content .project-carousel .carousel-control.left,
+.single-project .modal-content .project-carousel .carousel-control.right{
+  background: transparent;
+}
+
+.project-carousel .carousel-control .arrow-left{
+  background: #15e99d;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-carousel .carousel-control .arrow-left img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+}
+
+.project-carousel .carousel-control .arrow-right{
+  background: #15e99d;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-carousel .carousel-control .arrow-right img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+}
+
+.single-project .modal-content .project-tags{
+  padding-left: 80px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.single-project .modal-content .project-tags::before{
+  content: "";
+  background: #15e99d;
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+
+.single-project .modal-content .project-tags ul li{
+  padding: 15px; 
+  position: relative;
+}
+
+.single-project .modal-content .project-tags ul li::after{
+  content: "";
+  background: #15e99d;
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.single-project .modal-content .project-tags ul li:last-child::after{
+  content: none;
+}
+
+.single-project .modal-content .project-description h2{
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.single-project .modal-content .project-description h2::after{
+  content: "";
+  background: #15e99d;
+  height: 2px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+
+
+/*==================================================
+  Service Section
+==================================================*/
+
+.services-bg .parallax-window{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+}
+
+.services-bg .parallax-window::after{
+  content: "";
+  background: transparent;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #15e99d;
+  border-top: 1px solid #15e99d;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.service-list{
+  padding-left: 15px;
+}
+
+.service-list .service-item{
+  padding: 20px 0;
+  position: relative;
+}
+
+
+.service-list .service-item .service-name span.service-icon{
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+
+.service-list .service-item .service-name h3{
+  margin-left: 70px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+
+/*==================================================
+  News Section
+==================================================*/
+
+#news{
+  text-align: center;
+}
+
+article.news-item{
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+article.news-item .date{
+  background: #15e99d;
+  font-family:"Athelas W01 Bold";
+  color: #fff;
+  width: 65px;
+  height: 75px;
+  padding: 10px 15px;
+}
+
+article.news-item .date span{
+  font-size: 25px;
+  display: block;
+}
+
+article.news-item .news-info{
+  margin-left: 80px;
+}
+
+article.news-item .news-info .news-img .parallax-window{
+  height: 160px;
+}
+
+
+/*==================================================
+ Footer | Contact Me
+==================================================*/ 
+
+#footer{
+  background: #191919;
+  height: 100vh;
+}
+
+.contact-me{
+  background: transparent;
+  width: 72%;
+  margin-left: 8%;
+  text-align: center;
+}
+
+.contact-me .wrapper{
+  padding-bottom: 0;
+}
+
+.email-me{
+  text-align: left;
+}
+
+form.contact-form .form-control{
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.contact-info{
+  text-align: left;
+  color: #fff;
+}
+
+.contact-info .reach{
+  padding: 10px 0;
+}
+
+.contact-info .reach .reach-icon{
+  background: #15e99d;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+  font-size: 18px;
+}
+
+.contact-info .reach .reach-info{
+  margin-left: 55px;
+  line-height: 20px;
+}
+
+.contact-info .reach .reach-info strong{
+  font-family:"Athelas W01 Bold";
+  font-size: 16px;
+}
+
+
+/*==================================================
+  Fixed Left Bar
+==================================================*/
+
+.left-bar{
+  height: 100%;
+  width: 8%;
+  position: fixed;
+  left: 0;
+  top:0;
+  z-index: 1030;
+}
+
+
+/*Logo*/
+
+.left-bar .logo{
+  background: #15e99d;
+  padding: 25px 0;
+  text-align: center;
+}
+
+
+/*Social Links*/
+
+.left-bar .social-links{
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.left-bar .social-links::before{
+  content: "";
+  background: #15e99d;
+  width: 1px;
+  height: 170px;
+  position: absolute;
+  top: -180px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.left-bar .social-links::after{
+  content: "";
+  background: #15e99d;
+  width: 1px;
+  height: 50px;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.left-bar .social-links ul{
+  margin: 0;
+  padding: 0;
+}
+
+.left-bar .social-links ul li{
+  list-style: none;
+  text-align: center;
+}
+
+
+/*==================================================
+ CSS for width 991px
+==================================================*/ 
+
+@media only screen and (max-width : 991px) {
+  
+  /* Navigation -----------------------------------------------------------------------------------------------------------------------------------*/
+  nav.navbar{padding: 20px;}
+  
+  /* About Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-photo .parallax-window{height: 720px;}
+ 
+}
+
+
+/*==================================================
+ CSS for width 767px
+==================================================*/ 
+
+@media only screen and (max-width : 767px) {
+  
+  /* Navigation -----------------------------------------------------------------------------------------------------------------------------------*/
+  nav.vertical-right{background: #fff; height: auto; width: 100%; padding: 0;}
+  nav.vertical-right .navbar-brand{padding: 0 15px;}
+  nav.vertical-right .navbar-brand img{height: 65px;}
+  nav.vertical-right.navbar-fixed-top .navbar-collapse{max-height: none !important; border: none;}
+  nav.vertical-right ul.void-vertical-right{position: relative; top: 0; transform: translateY(0);}
+  nav.vertical-right ul.void-vertical-right li a{color: #2f2f2f;}
+  
+  /* Common -----------------------------------------------------------------------------------------------------------------------------------*/
+  section{width: 100%; margin: 0 !important;}
+  
+  /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  #intro.parallax-window{height: 100vh;}
+  .my-info::before{bottom: -100px;}
+  .my-info h1{font-size: 60px;}
+  
+  /* About Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-photo .parallax-window{height: 550px;}
+  
+  /* Works Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .single-project .onepage-view .project-info{position: relative; width: auto; left: 0;}
+  .single-project .onepage-view .project-info h2{margin-top: 20px; text-transform: none;}
+  .single-project .onepage-view .project-info h2::before{content: none;}
+  .single-project .onepage-view .project-info span.details{margin-bottom: 30px; color: #2f2f2f;}
+  .single-project .onepage-view .project-tags{position: relative; transform: rotate(0); right: initial; bottom: initial; padding: 10px 0 0 0;}
+  .single-project .onepage-view .project-tags ul li{color: #2f2f2f;}
+  .single-project .onepage-view .project-tags ul li:after{background: #2f2f2f;}
+  .single-project .modal-content .project-tags{padding-left: 30px;}
+  .single-project .modal-content .project-tags::before{content: none;}
+  .single-project .modal-content .project-tags ul li{display: block;}
+  .single-project .modal-content .project-tags ul li::after{content: "" !important; height: 1px; width: 20px; top: 30px; left: -20px;}
+  
+  /* Services Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .services-bg .parallax-window{width: 100%;}
+  .services-bg .parallax-window:after{content: none;}
+  .service-list{padding-left: 0;}
+  
+  /* Footer Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  #footer{height: auto;}
+  .contact-me{width: auto !important; margin: 0;}
+  .contact-me .wrapper{padding-bottom: 120px;}
+  
+}
+
+
+/*==================================================
+ Preloader CSS
+==================================================*/ 
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #15e99d;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+
+/*====================================================================================The End====================================================================================*/
+
+/*==================================================
+  Buy Now Button
+==================================================*/
+
+.btn-buy{
+  background: #333;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px;
+  color: #82B541;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0, .2);
+  z-index: 999;
+}
+
+.btn-buy:hover,
+.btn-buy:active,
+.btn-buy:focus{
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .3);
+  transition: all 1s;
+}
+
+.btn-buy .italy{
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn-buy .price{
+  position: relative;
+  margin-left: 15px;
+  color: #82B541;
+}
+
+.btn-buy .price::before{
+  content: "";
+  background: rgba(255,255,255, .9);
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,959 @@
+/*==================================================
+  Template Name: Void 
+  Description: Onepage Parallax Personal Portfolio Template
+  Author: thunder-team
+  Author URL: https://themeforest.net/user/thunder-team
+  Version: 1.1
+==================================================*/
+
+/*==================================================
+  [Table of Contents]
+  --------------------------------------------------
+  - body
+    - Typography
+    - Common 
+    - Navigation
+    - Onepage Sections
+      - Intro
+      - About
+      - Folio
+      - Services
+      - Plans
+      - Testimonials
+      - News
+      - footer/Contact
+      - Fixed Elements
+    - Media Queries 
+      - 991px
+      - 767px
+    - Preloader
+
+==================================================*/
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #4d4d4d;
+}
+
+
+/*==================================================
+  Typography
+  ==================================================*/
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Playfair Display', serif;
+  color: #f4593b;
+  font-weight: 700;
+}
+
+.headline{
+  position: relative;
+  transform: translateY(125%);
+}
+
+.headline::before{
+  content: "";
+  height: 170px;
+  width: 170px;
+  border: 10px solid rgba(128,128,128, .08);
+  position: absolute;
+  top: 0;
+  transform: translateX(-9%) translateY(-130%) rotate(45deg);
+}
+
+.headline h2{
+  font-size: 85px;
+  margin-bottom: 40px;
+}
+
+.white{
+  color: #fff;
+}
+
+a{
+  color:  #f4593b;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: #fc715e;
+  transition: 1s all;
+}
+
+
+/*==================================================
+Common
+==================================================*/
+
+section{
+  text-align: center;
+  position: relative;
+}
+
+.container{
+  max-width: 1030px;
+}
+
+.wrapper{
+  padding-top: 120px;
+}
+
+.content{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: left;
+  position: relative;
+}
+
+.content::before{
+  content: "";
+  background: #fff;
+  width: 83%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+  box-shadow: 0 0 80px rgba(0,0,0, 0.05);
+}
+
+button.btn-primary{
+  background: #f4593b;
+  border: 2px solid #f4593b;
+  padding: 6px 30px;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+button.btn-primary:hover{
+  background: transparent;
+  border: 2px solid #f4593b;
+  color: #f4593b;
+  transition: all .5s;
+}
+
+.btn-secondary{
+  background: transparent;
+  border: 2px solid #f4593b;
+  padding: 6px 20px;
+  font-family: 'Playfair Display', serif;
+  color: #f4593b;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover{
+  background: #f4593b;
+  border: 2px solid #f4593b;
+  color: #fff;
+  transition: all .5s;
+}
+
+ul.element-scroll-parallax{
+  margin:0;
+}
+
+ul.element-scroll-parallax li{
+  list-style: none;
+  position: absolute;
+  z-index:-1;
+}
+
+.form-control{
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #f2f2f2;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.margin-0{
+  margin: 0 !important;
+}
+
+
+/*==================================================
+Navigation
+==================================================*/
+
+nav.nav-center-transparent{
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+nav.nav-center-transparent .navbar-header{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav.nav-center-transparent .navbar-header .navbar-brand{
+  background: #f4593b;
+  height: 120px;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+nav.nav-center-transparent .navbar-nav{
+  margin: 35px 0 0 0;
+}
+
+nav.nav-center-transparent .navbar-nav li a{
+  color: #808080;
+  font-size: 14px;
+}
+
+nav.nav-center-transparent .navbar-nav li a:hover,
+nav.nav-center-transparent .navbar-nav li a:active,
+nav.nav-center-transparent .navbar-nav li a:focus{
+  color: #f4593b;
+}
+
+nav.nav-center-transparent .navbar-nav > .active > a, 
+nav.nav-center-transparent .navbar-nav > .active > a:focus, 
+nav.nav-center-transparent .navbar-nav > .active > a:hover{
+  background: transparent;
+  color: #f4593b;
+}
+
+nav.nav-center-transparent .navbar-toggle{
+  margin-right: 0; 
+  background: none; 
+  border: 0;
+}
+
+nav.nav-center-transparent .navbar-toggle:focus, 
+nav.nav-center-transparent .navbar-toggle:hover,
+nav.nav-center-transparent .navbar-toggle:active{
+  background: none;
+}
+
+nav.nav-center-transparent .menu-sign{
+  color: #666; 
+  font-size: 16px; 
+  font-weight: 700;
+}
+
+nav.nav-center-transparent .menu-sign img{
+  margin-left: 10px;
+}
+  
+  
+/*==================================================
+Intro
+==================================================*/
+
+#intro{
+  background: url(../media/photographer/backgrounds/intro.jpg) fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 768px;
+}
+
+.my-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  margin: auto;
+  width: 100%;
+  display: inline-block;
+  z-index:1;
+}
+
+.my-info::before{
+  content: "";
+  background: #fff;
+  width: 180px;
+  height: 115%;
+  position: absolute;
+  left: 0;
+  right: 0; 
+  margin: auto;
+  transform: translateY(-8%);
+  z-index:-1;
+}
+
+.my-info img.my-photo{
+  box-shadow: 0 0 25px rgba(0,0,0, .5);
+}
+
+.my-info .name{
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+.my-info .name h1, 
+.my-info .name h3{
+  color: #fff;
+}
+
+.my-info .name h1{
+  font-size: 115px;
+  text-shadow: 0 13.36px 8.896px rgba(0,0,0, .7), 0 -2px 1px #fff;
+}
+
+  
+/*==================================================
+About Section
+==================================================*/
+
+#about .content{
+  min-height: 400px;
+}
+
+#about .content .learn-me{
+  position: relative;
+}
+
+#about .content .learn-me::before{
+  content: "";
+  background: #f2f2f2;
+  height: 230px;
+  width: 8px;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+
+#about .content .content-img{
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+
+
+/*==================================================
+Folio Section
+==================================================*/
+
+#folio .content{
+  padding-bottom: 0;
+}
+
+#folio .content::before{
+  background: linear-gradient(to right, rgba(0,0,0, 0.7) , rgba(0,0,0, 0.7)), url("../media/photographer/backgrounds/portfolio.jpg") fixed no-repeat;
+  background-size: cover;
+  height: 90%;
+}
+
+/*Portfolio Grids*/
+
+#portfolio {  
+  -webkit-column-count: 3; 
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-column-width: 33.33333333333333%;
+  -moz-column-width: 33.33333333333333%;
+  column-width: 33.33333333333333%;
+}
+
+.tile { 
+  -webkit-transform: scale(0);
+  transform: scale(1);
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+.tile img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.tile img:hover{
+  transform: scale(1.05);
+  transition: 1s all;
+}
+
+
+/*==================================================
+Services Section
+==================================================*/
+
+.service-list .service-item{
+  margin-bottom: 30px;
+}
+
+.service-list .service-item .service-icon{
+  border: 1px solid #f2f2f2;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 70px;
+  color: #f4593b;
+  display: block;
+  float: left;
+}
+
+.service-list .service-item .service-info{
+  margin-left: 100px;
+}
+
+#services .content-img{
+  position: absolute;
+  left: -60px;
+  transform: translateY(105%);
+}
+
+
+/*==================================================
+Plans Section
+==================================================*/
+
+#plans{
+  text-align: center;
+}
+
+ul.packages{
+  margin: 0;
+  padding: 0;
+}
+
+ul.packages li{
+  padding: 40px 30px;
+}
+
+ul.packages li h5{
+  color: #808080;
+}
+
+ul.packages li .price{
+  font-family: 'Playfair Display', serif;
+  color: #f4593b;
+  font-size: 70px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul.packages li .price span.usd{
+  font-size: 25px;
+}
+
+ul.packages li .price span.cents{
+  font-size: 25px;
+  
+}
+
+ul.packages li .features{
+  margin-bottom: 20px;
+}
+  
+ul.packages li .features span{
+  display: block;
+  padding: 5px 0;
+}  
+
+ul.packages li.featured{
+  background: #f4593b;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #fff;
+}
+
+ul.packages li.featured h5{
+  color: #fff;
+}
+
+ul.packages li.featured .price{
+  color: #fff;
+}
+
+ul.packages li.featured button{
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+
+/*==================================================
+Clients Section
+==================================================*/
+
+#clients .content{
+  padding-bottom: 0;
+}
+
+#clients .content::before{
+  background: linear-gradient(to right, rgba(0,0,0, 0.3) , rgba(0,0,0, 0.3)), url("../media/photographer/backgrounds/clients.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85%;
+}
+
+.testimonials .item .testimonial-client .client-info-quote{
+  padding-right: 150px;
+  transform: translateY(50px);
+  position: absolute;
+}
+
+.testimonials .item .testimonial-client .client-info-quote blockquote{
+  padding: 0;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+/*==================================================
+News Section
+==================================================*/ 
+
+.news-list .news-item{
+  padding: 15px 0;
+}
+  
+.news-list .news-item .post-date{
+  display: block;
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: #808080;
+  font-weight: 700;
+  text-align: left;
+  width: 90px;
+}  
+
+.news-list .news-item .post-date span{
+  display: block;
+  font-size: 14px;
+}
+
+.news-list .news-item .news-content{
+  margin-left: 80px;
+  padding-left: 30px;
+  border-left: 1px solid #f2f2f2;
+}
+
+
+#news .content-img{
+  position: absolute;
+  width: 250px;
+  left: 0;
+  transform: translateX(-50%) translateY(170%);
+}
+ 
+
+/*==================================================
+Footer
+==================================================*/  
+
+#footer{
+  background: #000;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  margin-top: 120px;
+}
+
+#footer h2{
+  font-size: 36px;
+}
+
+#footer .contact-form .form-control{
+  border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.contact-info{
+  background: #f4593b;
+  padding: 40px 30px;
+}
+
+.contact-info .reach strong{
+  font-family: 'Playfair Display', serif;
+}
+
+.copyright{
+  background: #fff;
+  width: 100%;
+  color: #4d4d4d;
+  text-align: center;
+  padding: 80px 0;
+}
+
+  
+/*==================================================
+Fixed Elements
+==================================================*/ 
+
+/* Camera Frame*/
+  
+.camera-frame{
+  position: absolute;
+}
+
+.camera-frame span{
+  position: fixed;
+  display: block;
+  height: 75px;
+  width: 75px;
+}
+
+.camera-frame span:nth-child(1){
+  background: transparent;
+  border-left: 1px solid #f4593b;
+  border-top: 1px solid #f4593b;
+  top: 30px;
+  left: 30px;
+}
+
+.camera-frame span:nth-child(2){
+  background: transparent;
+  border-left: 1px solid #f4593b;
+  border-bottom: 1px solid #f4593b;
+  bottom: 30px;
+  left: 30px;
+}
+
+.camera-frame span:nth-child(3){
+  background: transparent;
+  border-right: 1px solid #f4593b;
+  border-top: 1px solid #f4593b;
+  top: 30px;
+  right: 30px;
+}
+
+.camera-frame span:nth-child(4){
+  background: transparent;
+  border-right: 1px solid #f4593b;
+  border-bottom: 1px solid #f4593b;
+  bottom: 30px;
+  right: 30px;
+}
+
+/*Scroll*/
+
+.scroll{
+  position: fixed;
+  left: 30px;
+  color: #808080;
+  top: 50%;
+  display: inline-block;
+  transform: rotate(270deg);
+}
+
+.scroll p{
+  position: relative;
+}
+
+.scroll p::after{
+  content: "";
+  background: #808080;
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  left: 0;
+  top: 50%;
+  transform: translateX(-110%) translateY(-50%);
+}
+
+/*Social Links*/
+
+.social-links{
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-links ul.follow{
+  margin: 0; 
+  padding: 0;
+  text-align: center;
+}
+
+.social-links ul.follow li{
+  list-style: none;
+  display: block;
+  background: #808080;
+  margin: 5px 0;
+  width: 30px;
+  height: 30px; 
+  border-radius: 50%;
+}
+
+.social-links ul.follow li a{
+  color: #fff;
+  line-height: 30px;
+}
+  
+.social-links ul.follow li a:hover,  
+.social-links ul.follow li a:active,
+.social-links ul.follow li a:focus{
+  color: #f4593b;
+  transition: 1s all;
+}
+  
+
+/*==================================================
+ CSS for width 991px
+==================================================*/ 
+
+@media only screen and (max-width : 991px) {
+  
+  .headline h2{font-size: 65px;}
+  
+
+  /* Services Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  #services .content-img{transform: translateY(175%);}
+  
+  
+ /* Fixed Section -----------------------------------------------------------------------------------------------------------------------------------*/ 
+  
+ .camera-frame span{width: 40px;height: 40px;}
+ 
+ /* Footer Section -----------------------------------------------------------------------------------------------------------------------------------*/ 
+ 
+  #footer{height: auto !important;}
+  
+}
+
+
+/*==================================================
+ CSS for width 767px
+==================================================*/ 
+
+@media only screen and (max-width : 767px) {
+  
+  .headline{transform: translateY(0);}
+  .headline::before{content: none;}
+  .wrapper{padding-top: 80px; padding-bottom: 80px;}
+  .content{padding: 0;}
+  .content::before{content: none;}
+  .content-img{position: relative !important;}
+  
+  
+  /* Header -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  nav.nav-center-transparent .navbar-nav{margin: 0;}
+  nav.nav-center-transparent .navbar-header{position: relative; left: 0; transform: translateX(0); margin: 0;}
+  nav.nav-center-transparent .navbar-header .navbar-brand{height: 90px; padding-top: 10px;}
+  nav.nav-center-transparent .navbar-toggle{margin-right: 0; margin-top: 25px;}
+  nav.nav-center-transparent .navbar-collapse{
+    background: rgba(0,0,0, .9); 
+    position: relative; 
+    border-color: transparent !important;
+    border-radius: 4px; 
+    max-height: 100% !important; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    margin: 5px 0 0 0;
+  }
+  nav.nav-center-transparent .navbar-toggle:focus,
+  nav.nav-center-transparent .navbar-toggle:hover{background: none !important;}
+  
+  
+  /* intro -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  .my-info{bottom: 200px;}
+  .my-photo{max-width: 220px;}
+  .my-info .name h1{font-size: 60px;}
+  
+  
+  /* About Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  #about .content .content-img{top: 0;}
+  
+  
+  /* Portfolio Section -----------------------------------------------------------------------------------------------------------------------------------*/
+    
+  #folio{background: linear-gradient(to right, rgba(0,0,0, 0.7) , rgba(0,0,0, 0.7)), url("../media/photographer/backgrounds/portfolio.jpg") fixed no-repeat; background-size: cover;}
+  #folio .content::before{background: none;}
+  #portfolio {
+    margin: 1rem 0;
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 50%;
+    -moz-column-width: 50%;
+    column-width: 50%;
+  }
+  
+  
+  /* Services Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  #services .wrapper{padding-bottom: 40px;}
+  
+  
+  /* Plans Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  #plans .wrapper{padding-top: 0;}
+  ul.packages li{display: block;}
+  
+  
+  /* Clients Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  #clients{background: linear-gradient(to right, rgba(0,0,0, 0.3) , rgba(0,0,0, 0.3)), url("../media/photographer/backgrounds/clients.jpg") fixed no-repeat; background-position: center; background-size: cover;}
+  #clients .content::before{content: none;}
+  .testimonials .testimonial-client .client-photo{float: none !important;}
+  .testimonials .testimonial-client .client-info-quote{position: relative !important; padding: 0 !important; transform: translateY(0) !important;}
+  
+  
+  /* Footer Section -----------------------------------------------------------------------------------------------------------------------------------*/
+
+  .contact-info{margin-top: 30px;}
+  
+}
+
+
+/*==================================================
+ Preloader CSS
+==================================================*/ 
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #f4593b;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+
+
+/*====================================================================================The End====================================================================================*/
+
+/*==================================================
+  Buy Now Button
+==================================================*/
+
+.btn-buy{
+  background: #333;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px;
+  color: #82B541;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0, .2);
+  z-index: 999;
+}
+
+.btn-buy:hover,
+.btn-buy:active,
+.btn-buy:focus{
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .3);
+  transition: all 1s;
+}
+
+.btn-buy .italy{
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn-buy .price{
+  position: relative;
+  margin-left: 15px;
+  color: #82B541;
+}
+
+.btn-buy .price::before{
+  content: "";
+  background: rgba(255,255,255, .9);
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+

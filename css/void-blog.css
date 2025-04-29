@@ -1,0 +1,614 @@
+/*==================================================
+  Template Name: Void 
+  Description: Onepage Parallax Personal Portfolio Template
+  Author: thunder-team
+  Author URL: https://themeforest.net/user/thunder-team
+  Version: 1.1
+==================================================*/
+
+/*==================================================
+
+  [Table of Contents]
+  --------------------------------------------------
+  - body
+    - Typography
+    - Common
+    - Navigation
+    - Homepage Sections
+      - Intro
+      - About
+      - Projects
+      - Services
+      - Blog
+      - Footer - Contact Me
+    - Media Queries
+      - 992px
+      - 768px
+    - Preloader
+    
+==================================================*/
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Poppins', sans-serif;
+  color: #14ea70;
+  font-weight: 700;
+}
+
+a{
+  color: #14ea70;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: #15e99d;
+  transition: all 1s;
+}
+
+.container{
+  max-width: 1030px;
+}
+
+.btn-primary{
+  background: #14ea70;
+  border: 2px solid #14ea70;
+  padding: 5px 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+  background: #15e99d;
+  border: 2px solid #15e99d;
+  color: #000;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+.btn-secondary{
+  background: #fff;
+  border: 2px solid #14ea70;
+  padding: 5px 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #14ea70;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus{
+  background: #14ea70;
+  border: 2px solid #14ea70;
+  color: #000;
+  transition: all .5s;
+}
+
+.form-control{
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #f2f2f2;
+  text-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+blockquote{
+  font-style: italic;
+}
+
+
+/*==================================================
+  Navigation
+==================================================*/
+
+nav.nav-transparent{
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+nav.nav-transparent .navbar-header .navbar-brand{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav.nav-transparent .navbar-nav{
+  padding: 30px 0;
+}
+
+nav.nav-transparent .navbar-nav li a{
+  color: #191919;
+}
+
+nav.nav-transparent .navbar-nav li a.purchase{
+  color: #191919;
+}
+
+nav.nav-transparent .navbar-nav li a:hover,
+nav.nav-transparent .navbar-nav li a:active,
+nav.nav-transparent .navbar-nav li a:focus{
+  color: #191919;
+  transition: all 1s;
+}
+
+nav.nav-transparent .navbar-nav>.open>a, 
+nav.nav-transparent .navbar-nav>.open>a:focus, 
+nav.nav-transparent .navbar-nav>.open>a:hover{
+  background: transparent;
+  color: #191919;
+}
+
+nav.nav-transparent .navbar-nav .dropdown-menu{
+  background: #191919;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 4px;
+  position: absolute;
+}
+
+nav.nav-transparent .navbar-nav .dropdown-menu::befor{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #191919;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+nav.nav-transparent .navbar-nav .dropdown-menu li{
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255, .2);
+}
+
+nav.nav-transparent .navbar-nav .dropdown-menu li a{
+  color: #fff;
+}
+
+nav.nav-transparent .navbar-nav .dropdown-menu li a:hover,
+nav.nav-transparent .navbar-nav .dropdown-menu li a:active,
+nav.nav-transparent .navbar-nav .dropdown-menu li a:focus{
+  background: transparent;
+  color: #14ea70;
+}
+
+
+/*==================================================
+  Blog List
+==================================================*/
+
+.blog-contents{
+  padding: 50px 0;
+}
+
+.blog-contents a{
+  font-weight: 700;
+}
+
+.blog-heading{
+  padding-bottom: 15px;
+}
+
+.blog-heading h1{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.blog-heading h1::after{
+  content: "";
+  background: #14ea70;
+  height: 2px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transform: translateX(-50%);
+}
+
+.blog-post-list article.blog-post{
+  margin-bottom: 30px;
+}
+
+.blog-post-list article.blog-post .date,
+article.blog-single .date{
+  background: #14ea70;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 20px 15px;
+  max-width: 65px;
+}
+
+.blog-post-list article.blog-post .date span,
+article.blog-single .date{
+  font-size: 20px;
+  display: block;
+}
+
+.blog-post-list article.blog-post .post-info-wrapper{
+  margin-left: 80px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.blog-post-list article.blog-post .post-info-wrapper .article-title{
+  margin-top: 20px;
+}
+
+
+/*Blog Single Post*/
+
+article.blog-single .post-body{
+  margin-left: 80px;
+}
+
+article.blog-single .post-body .post-image .parallax-window{
+  height: 450px;
+  margin-bottom: 30px;
+}
+
+article.blog-single .post-body .meta-info{
+  padding: 20px 0;
+  margin: 20px 0;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+article.blog-single .post-body .meta-info ul.list-inline{
+  margin: 0;
+}
+
+article.blog-single .post-body .meta-info ul.list-inline li span{
+  font-size: 18px;
+  margin-right: 10px;
+  color: #808080;
+}
+
+article.blog-single .post-body .meta-info ul.list-inline li span img{
+  width: 35px;
+}
+
+article.blog-single .post-body .meta-info ul.list-inline li a{
+  color: #333;
+}
+
+article.blog-single .post-body .post-texts h2,
+article.blog-single .post-body .post-texts h3,
+article.blog-single .post-body .post-texts h4{
+  margin-top: 30px;
+}
+
+.post-comments{
+  margin: 30px 0;
+}
+
+.post-comments h2,
+.post-comments h3,
+.post-comments h4{
+  margin-bottom: 30px;
+}
+
+.post-comments .comments{
+  margin-bottom: 30px;
+}
+
+.post-comments .comments ul{
+  margin: 0;
+  padding: 0;
+}
+
+.post-comments .comments ul li{
+  list-style: none;
+}
+
+.post-comments .comments ul li a img{
+  width: 60px;
+}
+
+.post-comments .comments ul li .comment-wrapper{
+  margin-left: 75px;
+}
+
+.post-comments .comments ul li .comment-wrapper .user{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+/*Pagination*/
+
+ul.pagination{
+  margin-left: 80px;
+}
+
+ul.pagination > li > a{
+  color: #666;
+  border: none;
+}
+
+ul.pagination > li > a:hover,
+ul.pagination > li > a:active,
+ul.pagination > li > a:focus{
+  background: #14ea70;
+  color: #fff;
+  border-radius: 50px;
+  transition: all 1s;
+}
+
+ul.pagination > li.active > a{
+  background: #14ea70;
+  color: #fff;
+  border-radius: 50px;
+}
+
+
+/*==================================================
+ Blog Side Bar
+==================================================*/ 
+
+.widget-block{
+  margin-bottom: 30px;
+}
+
+.widget-block .widget-title{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.widget-block .widget-title::before{
+  content: "";
+  background: #14ea70;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
+}
+
+.widget-block a{
+  color: #333;
+}
+
+.widget-block .widget-title span{
+  background: #fff;
+  padding-right: 15px;
+}
+
+
+/*Category List*/
+
+ul.category-list{
+  margin: 0;
+  padding: 0;
+}
+
+ul.category-list li{
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px solid #f2f2f2;  
+}
+
+ul.category-list li a{
+  color: #333;
+}
+
+ul.category-list li a:hover,
+ul.category-list li a:active,
+ul.category-list li a:focus{
+  color: #14ea70;
+  transition: all 1s;
+}
+
+
+/*Recent Articles*/
+
+.recent{
+  margin-top: 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.recent img{
+  margin-top: 5px;
+}
+
+.recent .recent-post-info{
+  margin-left: 60px;
+}
+
+/*tags*/
+
+.tags ul li{
+  float: left;
+  padding: 0;
+  margin: 3px;
+}
+
+.tags ul li a{
+  background: #333;
+  border-radius: 30px;
+  padding: 0 15px;
+  display: inline-block;
+  min-width: 60px;
+  color: #fff;
+}
+
+.tags ul li a:hover,
+.tags ul li a:active,
+.tags ul li a:focus{
+  background: #15e99d;
+  transition: all 1s;
+}
+
+
+/*==================================================
+ CSS for width 767px
+==================================================*/ 
+
+@media only screen and (max-width : 767px) {
+  
+  nav.nav-transparent .navbar-header .navbar-brand{padding-top: 0; padding-bottom: 0}
+  nav.nav-transparent .navbar-header .navbar-brand img{height: 50px;}
+  nav.nav-transparent .navbar-collapse{background: #f2f2f2;}
+  nav.nav-transparent .navbar-nav{padding: 0;}
+  nav.nav-transparent .navbar-nav .dropdown-menu{border-radius: 0;}
+  nav.nav-transparent .navbar-nav .dropdown-menu::befor{content: none;}
+  nav.nav-transparent .navbar-nav .open .dropdown-menu > li > a{color: #fff;}
+  nav.nav-transparent .navbar-nav .open .dropdown-menu > li > a:hover,
+  nav.nav-transparent .navbar-nav .open .dropdown-menu > li > a:active,
+  nav.nav-transparent .navbar-nav .open .dropdown-menu > li > a:focus{color: #191919; transition: all 1s;}
+  
+}
+
+/*==================================================
+ Preloader CSS
+==================================================*/ 
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #14ea70;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+/*==================================================
+  Buy Now Button
+==================================================*/
+
+.btn-buy{
+  background: #333;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px;
+  color: #82B541;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0, .2);
+  z-index: 999;
+}
+
+.btn-buy:hover,
+.btn-buy:active,
+.btn-buy:focus{
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .3);
+  transition: all 1s;
+}
+
+.btn-buy .italy{
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn-buy .price{
+  position: relative;
+  margin-left: 15px;
+  color: #82B541;
+}
+
+.btn-buy .price::before{
+  content: "";
+  background: rgba(255,255,255, .9);
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}

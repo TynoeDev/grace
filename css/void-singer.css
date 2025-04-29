@@ -1,0 +1,1144 @@
+/*==================================================
+  Template Name: Void 
+  Description: Onepage Parallax Personal Portfolio Template
+  Author: thunder-team
+  Author URL: https://themeforest.net/user/thunder-team
+  Version: 1.1
+==================================================*/
+
+/*==================================================
+
+  [Table of Contents]
+  --------------------------------------------------
+  - body
+    - Typography
+    - Common 
+    - Navigation
+    - Homepage
+      - Intro
+      - Album
+      - About
+      - Store
+      - Tickets
+      - Blog
+      - Gallery
+      - Contact
+    - Media Queries 
+      - 991px
+      - 767px
+    - Preloader
+    
+==================================================*/
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #414042;
+}
+
+
+/*==================================================
+  Typography
+  ==================================================*/
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Changa One', cursive;
+}
+
+h1, h2, h3, h4 {
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+
+
+.headline{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.headline::before{
+  content:"";
+  background: #f7941e;
+  width: 580px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.headline h1{
+  position: relative;
+  text-transform: uppercase;
+}
+
+.headline h1.inverse{
+  color: #fff;
+}
+
+.white{
+  color: #fff;
+}
+
+.grey{
+  color: #808080;
+}
+
+a{
+  color:  #f7941e;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: #FBB040;
+  transition: 1s all;
+}
+
+
+/*==================================================
+  Common
+  ==================================================*/
+
+section{
+  text-align: center;
+  position: relative;
+}
+
+.container{
+  max-width: 1030px;
+}
+
+.wrapper{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.parallax-background img{
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1000;
+}
+
+.btn-primary{
+  background: #f7941e;
+  border: 2px solid #f7941e;
+  padding: 6px 30px;
+  font-family: 'Changa One', cursive;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+  background: transparent;
+  border: 2px solid #f7941e;
+  color: #f7941e;
+  transition: all 1s;
+}
+
+.btn-secondary{
+  background: transparent;
+  border: 2px solid #f7941e;
+  padding: 6px 30px;
+  font-family: 'Changa One', cursive;
+  color: #f7941e;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus{
+  background: #f7941e;
+  border: 2px solid #f7941e;
+  color: #fff;
+  transition: all 1s;
+}
+
+ul.element-scroll-parallax{
+  margin:0;
+}
+
+ul.element-scroll-parallax li{
+  list-style: none;
+  position: absolute;
+  z-index:-1;
+}
+
+.form-control{
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #f1f2f2;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+
+/*==================================================
+  Header
+  ==================================================*/
+  
+#header{
+  height: 50px;
+}
+  
+nav.nav-center{
+  background: #000;
+  border: 0;
+  border-radius: 0;
+  font-family: 'Changa One', cursive;
+  margin-bottom: 0;
+}
+
+nav.nav-center .navbar-header{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav.nav-center .navbar-header a.logo{
+  position: relative;
+  margin: 0;
+  padding: 0 15px;
+}
+  
+nav.nav-center .navbar-header a.logo::after{
+border-color: #fff transparent transparent;
+border-style: solid;
+border-width: 105px 130px 0;
+content: "";
+height: 0;
+left: 50%;
+position: absolute;
+top: 0;
+transform: translateX(-50%);
+width: 0;
+z-index: -1;
+}
+
+nav.nav-center .navbar-collapse{
+  border: none;
+}
+  
+nav.nav-center ul.navbar-nav li{
+  position: relative:
+}
+
+nav.nav-center ul.navbar-nav li::after{
+  content: "";
+  background: #fff;
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+nav.nav-center ul.navbar-nav li:last-child::after{
+  content: none;
+}
+
+nav.nav-center ul.navbar-nav li a{
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav.nav-center ul.navbar-nav li a:hover,
+nav.nav-center ul.navbar-nav li a:active,
+nav.nav-center ul.navbar-nav li a:focus{
+  color: #f7941e;
+  transition: 1s;
+}
+
+nav.nav-center ul.navbar-nav li.active a{
+  background: transparent;
+  color: #f7941e;
+}
+
+nav.nav-center ul.navbar-nav li.active a:hover,
+nav.nav-center ul.navbar-nav li.active a:active,
+nav.nav-center ul.navbar-nav li.active a:focus{
+  background: transparent;
+  color: #f7941e;
+  transition: 1s;
+}
+
+nav.nav-center .navbar-toggle{
+  border: none;
+}
+
+nav.nav-center .navbar-toggle:focus, 
+nav.nav-center .navbar-toggle:hover{
+  background: none;
+}
+
+nav.nav-center .menu-sign{
+  color: #808080; 
+  font-size: 16px; 
+  font-weight: 700;
+}
+
+nav.nav-center .menu-sign img{
+  margin-left: 10px;
+}
+
+
+/*==================================================
+Intro Section
+==================================================*/
+  
+#intro.parallax-window{
+  min-height: 700px;
+  background: transparent;
+  z-index: 1;
+}
+
+.my-info h1.my-name{
+  font-size: 120px;
+  color: #f1ebe5;
+  text-shadow: 0 13.36px 8.896px rgba(0,0,0, .4), 0 -2px 1px #fff;
+}
+
+  
+/*positioning the parallax elements*/
+
+#intro ul.element-scroll-parallax li{
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+#intro ul.element-scroll-parallax li:nth-child(1){
+  top: 30%;
+}
+
+#intro ul.element-scroll-parallax li:nth-child(1) img{
+  display: inline-block;
+}
+
+#intro ul.element-scroll-parallax li:nth-child(2){
+  top: 36%;
+}
+  
+  
+/*==================================================
+Album Section
+==================================================*/
+  
+#albums{
+  background: #000;
+  padding-bottom: 0;
+  z-index: auto !important;
+}
+
+#albums .headline h1::before{
+  content: "ALBUM";
+  color: rgba(255,255,255, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+}
+  
+#albums .container-fluid{
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+  
+ul.album-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+  
+ul.album-list li{
+  position: relative;
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 20%; 
+  width: -webkit-calc(100% / 5);
+  width: calc(100% / 5);
+  padding: 0;
+  cursor: pointer;
+}
+
+.album-list li img{
+  transition: 1s;
+}
+
+.album-list li .overlay{
+  background: rgba(274,148,30, 0.7);
+  visibility: hidden;
+  display:block;
+  overflow:hidden;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  opacity:0;
+  transition: 1s;
+  transform: translate(25%, 25%) scale(1.1);
+}
+
+.album-list li:hover img{
+  transform: scale(1.2);
+}
+
+.album-list li:hover .overlay{
+  visibility:visible;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.album-list li .overlay .album-info{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.album-list li .overlay .album-info h4{
+  position: relative;
+}
+
+.album-list li .overlay .album-info h4::after{
+  content: "";
+  background: #fff;
+  height: 1px;
+  width: 80%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*Album Modals*/
+
+#albums .modal-content{
+  padding: 30px;
+  border-radius: 0;
+}
+
+#albums .track-list{
+  text-align: left;
+}
+
+#albums .track-list .track-item{
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f2f2;
+}
+
+#albums .track-list .track-item span{
+  color: #f7941e;
+  margin-right: 20px;
+}
+
+  
+/*==================================================
+About Section
+==================================================*/
+  
+#about{
+  background: url("../media/singer/backgrounds/about.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 940px;
+  z-index: 1;
+}
+
+ #about .headline h1::before{
+  content: "ABOUT";
+  color: #f1f2f2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+  z-index: -2;
+}
+
+.about-me img.my-band{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 500px;
+  margin: auto;
+}
+
+ul.social-links{
+  margin: 30px 0 0 0;
+}
+
+ul.social-links li{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 6px;
+}  
+
+ul.social-links li::before{
+ content: "";
+  background: #000;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+ul.social-links li a{
+  color: #fff;
+}
+
+ul.social-links li a:hover{
+  color: #f7941e;
+  transition: 1s all;
+}
+  
+
+/*Positioning Parallax Elements*/
+  
+#about ul.element-scroll-parallax li:nth-child(1){
+  right: 52%;
+  bottom: 10%;
+}
+
+#about ul.element-scroll-parallax li:nth-child(2){
+  right: 44%;
+  bottom: 10%;
+}
+
+#about ul.element-scroll-parallax li:nth-child(3){
+  left: 44%;
+  bottom: 10%;
+}
+
+#about ul.element-scroll-parallax li:nth-child(4){
+  left: 52%;
+  bottom: 10%;
+}
+
+
+/*==================================================
+Image Divider
+==================================================*/
+
+.my-photo{
+  background: #000;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.my-photo .img-wrapper{
+  transform: rotate(45deg);
+  display: inline-block;
+  overflow: hidden;
+  margin-top: -210px;
+}
+.my-photo .img-wrapper img{
+  transform: scale(1.5) rotate(-45deg);
+  max-width: 420px;
+}
+
+  
+/*==================================================
+Store Section
+==================================================*/
+  
+#store{
+  background: #000;
+  z-index: 0;
+}
+
+ #store .headline h1::before{
+  content: "STORE";
+  color: rgba(255,255,255, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+  z-index: -2;
+}
+
+.products .item{
+  margin-bottom: 30px;
+}
+
+.products .item img.product-img{
+  margin: auto;
+}
+
+.products .item .item-description .price{
+  color: #f7941e;
+}
+
+.products .item .item-description .cart{
+  position: relative;
+}
+
+.products .item .item-description .cart::after{
+  content: "";
+  background: #f7941e;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -2;
+  opacity: .3;
+}
+
+.products .item .item-description .cart a{
+  color: #fff;
+  position: relative;
+  display: block;
+}
+
+.products .item .item-description .cart a:hover{
+  color: #f7941e;
+  transition: 1s all;
+}
+
+.products .item .item-description .cart a::after{
+  content:"";
+  background: #000;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+  
+  
+/*==================================================
+Tickets Section
+==================================================*/
+  
+#tickets{
+  background: url("../media/singer/backgrounds/tickets.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  z-index: 0;
+}
+  
+#tickets .headline h1::before{
+  content: "TICKET";
+  color: rgba(255,255,255, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+  z-index: -1;
+}
+  
+.events .event-item{
+  margin-bottom: 30px;
+}
+  
+.events .event-item .date{
+  background: rgba(247, 148, 30, 0.7);
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Changa One', cursive;
+  padding: 21px;
+  position: relative;
+}
+
+.events .event-item .date::after{
+  border-bottom: 15px solid transparent;
+  border-color: transparent transparent transparent rgba(247, 148, 30, 0.7);
+  border-left: 15px solid rgba(247, 148, 30, 0.7);
+  border-style: solid;
+  border-top: 15px solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -18px;
+  top: 37px;
+  width: 0;
+}
+  
+.events .event-item .date span{
+  font-size: 40px;
+}
+  
+.events .event-item .event-description{
+  background: rgba(255,255,255, 0.1);
+}
+  
+.events .event-item .event-description .event-info{
+  padding: 10px 30px;
+  text-align: left;
+}
+
+  
+.events .event-item .event-description .action{
+  padding: 31px 15px 0 0;
+  position: relative;
+}
+
+.events .event-item .event-description .action::before{
+  content: "";
+  background: rgba(255,255,255, 0.2);
+  height: 60px;
+  width: 1px;
+  position: absolute;
+  top: 25px;
+  left: -15px;
+}
+  
+  
+/*==================================================
+Blog Section
+==================================================*/
+  
+#blog{
+  background: rgba(0, 0, 0, 0) radial-gradient(#fff 50%, #f1f2f2 90%) repeat scroll 0 0;
+  z-index: 0;
+}
+
+#blog .headline h1::before{
+  content: "BLOG";
+  color: #f1f2f2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+  z-index: -1;
+}
+  
+article.blog-post{
+  margin-bottom: 30px;
+}
+
+article.blog-post .short-info{
+  background: #fff;
+  margin: -30px 15px 0 15px;
+  padding: 15px;
+  position: relative;
+}
+  
+  
+  /*==================================================
+  Gallery Section
+  ==================================================*/
+  
+#gallery{
+  background: #000;
+  z-index: auto !important;
+}
+  
+#gallery .headline h1::before{
+  content: "GALLERY";
+  color: rgba(255,255,255, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+}
+  
+#gallery .container-fluid{
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/*Gallery List*/
+
+ul.gallery-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+  
+ul.gallery-list li{
+  position: relative;
+  display:block;
+  float: left;
+  overflow: hidden;
+  width: 25%; /* Fallback */
+  width: -webkit-calc(100% / 4);
+  width: calc(100% / 4);
+  padding: 0;
+}
+
+ul.gallery-list li img{
+  transition: 1s;
+}
+
+ul.gallery-list li:hover img{
+  transform: scale(1.2);
+}
+
+ul.gallery-list li .overlay{
+  background: rgba(0,0,0, 0.2);
+  visibility: hidden;
+  display:block;
+  overflow:hidden;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  opacity:0;
+  transition: 1s;
+  transform: translate(25%, 25%) scale(1.1);
+  cursor: pointer;
+}
+
+ul.gallery-list li:hover .overlay{
+  visibility:visible;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+ul.gallery-list li .overlay i{
+  font-size: 80px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+
+/*==================================================
+Contact Section 
+==================================================*/
+  
+#contact{
+  background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url("../media/singer/backgrounds/footer.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#contact .headline h1::before{
+  content: "CONTACT";
+  color: rgba(255,255,255, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60px;
+  font-size: 150px;
+}
+
+.contact-form .form-control{
+  border-bottom: 2px solid #808080;
+}
+
+.send-email{
+  text-align: left;
+}
+
+.contact-info{
+  text-align: left;
+  color: #fff;
+}
+
+.contact-info .reach strong{
+  color: #f7941e;
+}
+
+/*==================================================
+Contact Section 
+==================================================*/
+
+#footer{
+  background: #000;
+  text-align: center;
+}
+
+#footer ul.social-links li::before{
+  background: none;
+}
+
+#footer ul.social-links li a{
+  font-size: 25px;
+}
+
+
+/*==================================================
+ CSS for width 991px
+==================================================*/ 
+
+@media only screen and (max-width : 991px) {
+  
+  /*Navigation*/
+  nav.nav-center .navbar-header{position: relative; left: 0; transform: translateX(0);}
+  nav.nav-center .navbar-header a.logo::after{border-width: 77px 110px 0;}
+  nav.nav-center .navbar-header a.logo img{height: 60px;}
+  nav.nav-center.navbar-fixed-top .navbar-collapse{max-height: none !important;}
+  nav.nav-center ul.navbar-nav li::after{content: none;}
+  
+  /*Navigation Breaking Point*/
+  .navbar-header{float: none;}
+  .navbar-left,.navbar-right{float: none !important;}
+  .navbar-toggle{display: block;}
+  .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+  .navbar-fixed-top{top: 0; border-width: 0 0 1px;}
+  .navbar-collapse.collapse{display: none!important;}
+  .navbar-nav{float: none!important; margin-top: 7.5px;}
+  .navbar-nav > li {float: none;}
+  .navbar-nav > li > a{padding-top: 10px; padding-bottom: 10px;}
+  .collapse.in{display:block !important;}
+  
+}
+
+
+/*==================================================
+ CSS for width 767px
+==================================================*/ 
+
+@media only screen and (max-width : 767px) {
+  
+  .headline::before{content: none;}
+  .headline h1{font-size: 40px;}
+  .headline h1::before{content: none !important;}
+  
+  
+  /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-info h1.my-name{font-size: 70px;}
+  
+  
+  /* Album Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  ul.album-list li{
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 50%; 
+  width: -webkit-calc(100% / 2);
+  width: calc(100% / 2);
+  padding: 0;
+  cursor: pointer;
+  }
+
+
+  /* Event Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .events .event-item .date::after{content: none;}
+  .events .event-item .event-description{padding-bottom: 20px;}
+  .events .event-item .event-description .event-info{text-align: center;}
+  .events .event-item .event-description .action{padding: 0;}
+  
+  /* Gallery Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  ul.gallery-list li{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 50%; 
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2);
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Footer -----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  .send-email{margin-bottom: 30px;}
+  
+}
+
+
+/*==================================================
+ CSS for width 480px
+==================================================*/ 
+
+@media only screen and (max-width : 480px) {
+  
+  #about{min-height: auto !important;}
+  .about-me img.my-band{display: none;}
+  
+}
+
+/*==================================================
+ Preloader CSS
+==================================================*/ 
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #f7941e;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+
+/*==================================================
+  Buy Now Button
+==================================================*/
+
+.btn-buy{
+  background: #333;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px;
+  color: #82B541;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0, .2);
+  z-index: 999;
+}
+
+.btn-buy:hover,
+.btn-buy:active,
+.btn-buy:focus{
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .3);
+  transition: all 1s;
+}
+
+.btn-buy .italy{
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn-buy .price{
+  position: relative;
+  margin-left: 15px;
+  color: #82B541;
+}
+
+.btn-buy .price::before{
+  content: "";
+  background: rgba(255,255,255, .9);
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+

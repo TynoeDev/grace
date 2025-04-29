@@ -1,0 +1,1010 @@
+/*==================================================
+  Template Name: Void 
+  Description: Onepage Parallax Personal Portfolio Template
+  Author: thunder-team
+  Author URL: https://themeforest.net/user/thunder-team
+  Version: 1.1
+==================================================*/
+
+/*==================================================
+
+  [Table of Contents]
+  --------------------------------------------------
+  - body
+    - Typography
+    - Common 
+    - Navigation
+    - Homepage
+      - Intro
+      - About
+      - Works
+      - Gallery
+      - Achievements
+      - Events
+      - Footer/Contact
+      - Fixed Elements
+    - Media Queries 
+      - 1260px
+      - 991px
+      - 767px
+      - 480px
+    - Preloader
+      
+==================================================*/
+
+
+body{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+}
+
+
+/*==================================================
+  Typography
+  ==================================================*/
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Abril Fatface', cursive;
+  color: #ed1e79;
+}
+
+.section-title .headline{
+  text-align: left;
+  position: relative;
+  transform: translateY(100px);
+}
+
+.headline::after{
+  content: "";
+  background: rgba(77,77,77, .2);
+  width: 1px;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+  
+.headline h1{
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.headline h1::before{
+  
+}
+
+.headline h2{
+  color: #666;
+}
+
+.white{
+  color: #fff;
+}
+
+.grey{
+  color: #808080;
+}
+
+a{
+  color: #ED1E79;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: #D4145A;
+  outline: none;
+  transition: all 1s;
+}
+
+
+/*==================================================
+  Common
+  ==================================================*/
+
+section{
+  position: relative;
+  z-index: -5;
+}
+
+.container{
+  max-width: 1030px;
+  position: relative;
+}
+
+.wrapper{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-contents{
+  height: 450px;
+}
+
+.btn-primary{
+  background: #ed1e79;
+  border: 2px solid #ed1e79;
+  padding: 6px 30px;
+  font-family: 'Abril Fatface', cursive;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover{
+  background: #d4145a;
+  border: 2px solid #d4145a;
+  color: #fff;
+  transition: all .5s;
+}
+
+.btn-secondary{
+  background: transparent;
+  border: 2px solid #ed1e79;
+  padding: 6px 30px;
+  font-family: 'Abril Fatface', cursive;
+  color: #ed1e79;
+  font-size: 25px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover{
+  background: transparent;
+  border: 2px solid #d4145a;
+  color: #d4145a;
+  transition: all .5s;
+}
+
+.form-control{
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #f5f5f5;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.modal-content{
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.modal-content img{
+  margin: auto;
+}
+
+/*FullPage CSS*/
+
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{
+    height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
+
+
+/*==================================================
+  Navigation
+  ==================================================*/
+  
+#header{
+  position: relative;
+}
+
+#header::before{
+  content: "";
+  background: rgba(77, 77, 77, 0.2);
+  width: 1px;
+  height: 100vh;
+  position: absolute;
+  left: 50px;
+  z-index: 1;
+}
+
+nav.vertical-left{
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  right: initial;
+}
+
+nav.vertical-left .navbar-collapse{
+  display: inline-block;
+}
+
+nav.vertical-left ul.navbar-nav li{
+  display: block;
+  float: none !important;
+  position: relative;
+}
+
+nav.vertical-left ul.navbar-nav li::after{
+  content: "";
+  background: #666;
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+}
+
+nav.vertical-left ul.navbar-nav li:last-child::after{
+  content: none;
+}
+
+nav.vertical-left ul.navbar-nav li a{
+  color: #666;
+  padding: 15px 25px;
+  font-weight: 700;
+}
+
+nav.vertical-left ul.navbar-nav li a:hover,
+nav.vertical-left ul.navbar-nav li a:active,
+nav.vertical-left ul.navbar-nav li a:focus{
+  color: #ed1e79;
+}
+
+nav.vertical-left ul.navbar-nav li.active{
+  position: relative;
+}
+
+nav.vertical-left ul.navbar-nav li.active::before{
+  content: "";
+  background: #ed1e79;
+  width: 3px;
+  height: 20px;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav.vertical-left ul.navbar-nav li.active a{
+  background: none;
+  color: #ed1e79;
+}
+
+nav.vertical-left ul.navbar-nav li.active a:hover,
+nav.vertical-left ul.navbar-nav li.active a:active,
+nav.vertical-left ul.navbar-nav li.active a:focus{
+  background: none;
+  color: #ce0666;
+}
+
+nav.vertical-left ul.navbar-nav li a span.count{
+  display: block;
+}
+
+nav.vertical-left ul.navbar-nav li a:hover span.count{
+  display: none;
+}
+
+nav.vertical-left ul.navbar-nav li a span.anchor{
+  display: none;
+}
+
+nav.vertical-left ul.navbar-nav li a:hover span.anchor{
+  display: block;
+}
+
+nav.vertical-left ul.navbar-nav li.active a span.count{
+  display: none;
+}
+
+nav.vertical-left ul.navbar-nav li.active a span.anchor{
+  display: block;
+}
+
+nav.vertical-left .navbar-toggle{
+  margin-right: 0; 
+  background: none; 
+  border: 0;
+}
+
+nav.vertical-left .navbar-toggle:focus, 
+nav.vertical-left .navbar-toggle:hover,
+nav.vertical-left .navbar-toggle:active{
+  background: none;
+}
+
+nav.vertical-left .menu-sign{
+  color: #666; 
+  font-size: 16px; 
+  font-weight: 700;
+}
+
+nav.vertical-left .menu-sign img{
+  margin-left: 10px;
+}
+
+
+
+
+/*==================================================
+Intro Section
+==================================================*/
+
+#intro{
+  background: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+#intro::after{
+  content: "01";
+  color: #0c0c0c;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}
+
+/*positioning the scene layers*/
+
+ul#scene{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul#scene li{
+  width: 100%;
+  height: 100%;
+}
+
+ul#scene li img{
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: .15;
+  width: 45%;
+}
+
+ul#scene li:last-child img{
+  height: 95%;
+  width: auto;
+  opacity: .5;
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+}
+
+.my-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  margin: auto;
+}
+
+.my-info .name{
+  font-size: 100px;
+}
+
+
+/*==================================================
+About Section
+==================================================*/
+
+#about::after{
+  content: "02";
+  color: #f9f9f9;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+  z-index: -1;
+}
+
+.about-me{
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translate(-20%);
+}
+
+.about-me .headline{
+  position: relative;
+  top: 0;
+}
+
+.about-me .headline::after{
+  content: none;
+}
+
+
+/*==================================================
+Works Section
+==================================================*/
+
+#works{
+  background: linear-gradient(to right, rgba(0,0,0, .8) , rgba(0,0,0, .8)), url("../media/model/work.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+#works::before{
+  content: "03";
+  color: #0c0c0c;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}
+
+.my-works .work-item{
+  text-align: center;
+}
+
+.my-works .work-item.down{
+  margin-top: 40px;
+}
+
+.carousel-control.right,
+.carousel-control.left{
+  background: none;
+}
+
+.carousel .carousel-control .arrow-left{
+  background: #ed1e79;
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel-control .arrow-left img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+}
+
+.carousel .carousel-control .arrow-right{
+  background: #ed1e79;
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel-control .arrow-right img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -15px;
+}
+
+
+/*==================================================
+Gallery Section
+==================================================*/
+
+#gallery::after{
+  content: "04";
+  color: #f9f9f9;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+  z-index: -1;
+}
+
+.my-photos{
+  -webkit-column-count: 3; 
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-column-width: 33.33333333333333%;
+  -moz-column-width: 33.33333333333333%;
+  column-width: 33.33333333333333%;
+}
+
+.tile img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.tile img:hover{
+  opacity: .7;
+  transition: 1s all;
+}
+
+#gallery #gallery-carousel .carousel-indicators{
+  bottom: -40px;
+}
+
+#gallery #gallery-carousel .carousel-indicators li{
+  border: 1px solid #ed1e79;
+}
+
+#gallery #gallery-carousel .carousel-indicators li.active{
+  background: #ed1e79;
+}
+
+
+/*==================================================
+Achievements Section
+==================================================*/
+
+#achievements{
+  background: #FFF4F8;
+}
+
+#achievements::after{
+  content: "05";
+  color: rgba(225,255,255, .15);
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+  /*z-index: -1;*/
+}
+
+#achievements::before{
+  content:"";
+  background: #ed1e79;
+  height: 100%;
+  width: 57%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*z-index: -2;*/
+}
+
+.my-achievements .item-list{
+  text-align: left;
+  width: 100%;
+  position: relative;
+  margin-top: 80px;
+}
+
+.my-achievements .item-list .item{
+  margin: 15px 0;
+  color: #fff;
+}
+
+.my-achievements .item-list .item span.trophy{
+  float: left;
+  font-size: 30px;
+}
+
+.my-achievements .item-list .item .item-info{
+  margin-left: 50px;
+}
+
+.my-achievements .item-list .item .item-info h3{
+  color: #fff;
+}
+
+
+/*==================================================
+Events Section
+==================================================*/
+
+#events::after{
+  content: "06";
+  color: #f9f9f9;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+  z-index: -1;
+}
+
+.event-item{
+  margin: 15px 0;
+}
+
+.event-item .date{
+  background: #f8f8f8;
+  color: #666;
+  height: 125px;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  padding: 35px 0;
+}
+
+.event-item .date span{
+  color: #333;
+  font-size: 40px;
+}
+
+
+/*==================================================
+Contact Section
+==================================================*/
+
+#contact{
+  background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.94)), url("../media/model/contact-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#contact::before{
+  content: "07";
+  color: rgba(225,255,255, .03);
+  font-family: 'Abril Fatface', cursive;
+  font-size: 230px;
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}
+
+.contact-form,
+.contact-info{
+  margin-top: 30px;
+}
+
+.contact-form .form-control{
+  border-bottom: 2px solid #333;
+}
+
+.contact-info .reach{
+  color: #666;
+}
+
+.contact-info .reach strong{
+  color: #fff;
+}
+
+
+/*==================================================
+ Fixed Element CSS
+==================================================*/
+
+/*Fixed Social Media Links*/
+
+.social-links{
+  position: fixed;
+  margin: 0;
+  bottom: 5%;
+  right: 100px;
+}
+
+.social-links ul li{
+  background: #1a1a1a;
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.social-links ul li a{
+  color: #fff;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.social-links ul li a:hover{
+  color: #ed1e79;
+  transition: all 1s;
+}
+
+/*Fixed Copyright Text*/
+
+.copyright{
+  color: #666;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: rotate(-90deg) translateY(100px) ;
+}
+
+.scroll{
+  position: fixed;
+  color: #666;
+  left: 100px;
+  bottom: 5%;
+}
+
+
+
+/*==================================================
+ CSS for width 1260px
+==================================================*/ 
+
+@media only screen and (max-width : 1260px) {
+  .container{max-width: 75%;}
+  .headline h1{font-size: 50px;}
+  .headline h2{font-size: 18px;}
+  .my-achievements .item-list{margin-top: 0;}
+}
+
+
+/*==================================================
+ CSS for width 991px
+==================================================*/ 
+
+@media only screen and (max-width : 991px) {
+  
+  #header::before{content: none;}
+  nav.vertical-left{background: rgba(0,0,0, 0.9); right: 0; top: 0px; left: 0; padding-left: 15px; padding-right: 15px; transform: translateY(0);}
+  nav.vertical-left .navbar-collapse{max-height: none; padding-left: 20px; padding-right: 20px; border: 0;}
+  
+  /*Navigation Breaking Point*/
+  .navbar-header{float: none;}
+  .navbar-left,.navbar-right{float: none !important;}
+  .navbar-toggle{display: block;}
+  .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+  .navbar-fixed-top{top: 0; border-width: 0 0 1px;}
+  .navbar-collapse.collapse{display: none!important;}
+  .navbar-nav{float: none!important; margin-top: 7.5px;}
+  .navbar-nav > li {float: none;}
+  .navbar-nav > li > a{padding-top: 10px; padding-bottom: 10px;}
+  .collapse.in{display:block !important;}
+  
+  /* Common -----------------------------------------------------------------------------------------------------------------------------------*/
+  section::after{content: none !important;}
+  
+  .fp-tableCell{vertical-align: top !important;}
+  .section-contents{height: auto !important;}
+  .section-title .headline{transform: translateY(0);}
+  .headline::after{content: none;}
+  
+  /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  ul#scene li img{width: 70%;} 
+  .my-info{bottom: 20%;}
+  
+  /* About Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-photo{margin-bottom: 30px;}
+  .about-me{position: relative; transform: translateY(0) translate(0); top: 0;}
+  
+  /* Works Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-works .work-item.down{transform: translateY(0);}
+  
+  /* Gallery Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  .my-photos{
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 50%;
+    -moz-column-width: 50%;
+    column-width: 50%;
+  }
+  
+  /* Achievements Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  #achievements .headline h1{color: #fff;}
+  #achievements::before{width: 100% !important;}
+  .my-achievements .item-list{transform: translateY(0);}
+  
+  /* Fixed Elements -----------------------------------------------------------------------------------------------------------------------------------*/
+  .social-links{left: 0; right: 0; margin: auto; bottom: 30px;}
+  .social-links ul{text-align: center;}
+  
+}
+
+
+/*==================================================
+ CSS for width 767px
+==================================================*/ 
+
+@media only screen and (max-width : 767px) {
+ 
+ /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
+ ul#scene li img{width: 80%;} 
+ .my-info .name{font-size: 50px;}
+ 
+ /* Works Section -----------------------------------------------------------------------------------------------------------------------------------*/
+ .my-works .item{margin-bottom: 30px;}
+ 
+ .my-works .work-item.down{
+   margin-top: 0;
+ }
+  
+}
+
+
+/*==================================================
+ CSS for width 480px
+==================================================*/ 
+
+@media only screen and (max-width : 480px) {
+  
+  /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
+  ul#scene li img{width: 110%;} 
+  
+}
+
+
+/*==================================================
+ Preloader CSS
+==================================================*/ 
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #ed1e79;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+
+
+/*====================================================================================The End====================================================================================*/
+
+/*==================================================
+  Buy Now Button
+==================================================*/
+
+.btn-buy{
+  background: #333;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px;
+  color: #82B541;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0, .2);
+  z-index: 999;
+}
+
+.btn-buy:hover,
+.btn-buy:active,
+.btn-buy:focus{
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .3);
+  transition: all 1s;
+}
+
+.btn-buy .italy{
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn-buy .price{
+  position: relative;
+  margin-left: 15px;
+  color: #82B541;
+}
+
+.btn-buy .price::before{
+  content: "";
+  background: rgba(255,255,255, .9);
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
